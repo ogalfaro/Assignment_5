@@ -7,6 +7,7 @@ TagManager:
   - destination
   - Flashlight
   - FlashLight
+  - Collectable
   layers:
   - Default
   - TransparentFX

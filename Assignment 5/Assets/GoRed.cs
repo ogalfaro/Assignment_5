@@ -6,6 +6,7 @@ public class GoRed : MonoBehaviour
 {
     public Transform destination; 
     public Camera[] cams;
+    public int points = 0;
 
     public void camMainMove(){
         cams[0].enabled = true;
@@ -28,7 +29,7 @@ public class GoRed : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == "Player" && points > 0) {
             other.transform.position = new Vector3(-0.56f,1.51f,-12.44f);//destination.position;
             camRedMove();
         }
